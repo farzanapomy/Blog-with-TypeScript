@@ -28,8 +28,9 @@ const authCtrl = {
         } catch (error) {
             return res.status(500).json({ msg: error })
         }
+    },
+   
     }
-}
 
 
 

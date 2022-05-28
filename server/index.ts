@@ -4,7 +4,8 @@ import express from "express";
 import cors from 'cors';
 import cookieParser from "cookie-parser";
 import morgan from "morgan";
-import routes from './routes'
+import routes from './routes/index'
+import './config/database'
 
 
 // middleware
@@ -24,12 +25,11 @@ app.get('/', (req, res) => {
     res.send({ msg: "Hello Ts Database" });
 })
 
-app.use('/api', routes.authRouter);
+app.use('/api', routes.authRouter)
 
 
 
 // database 
-import './config/database'
 
 
 

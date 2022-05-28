@@ -1,8 +1,7 @@
 import authRouter from './authRouter'
 
-const router = {
+const routes = {
     authRouter
 }
 
-
-export default router; 
+export default routes;

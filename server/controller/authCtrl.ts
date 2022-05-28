@@ -9,7 +9,7 @@ const authCtrl = {
     register: async (req: Request, res: Response) => {
         try {
             const { name, account, password } = req.body
-            const user = await Users.findOne({ account })
+            const user = await Users.findOne()
             if (user) return res.status(400).json({ msg: 'Email or Phone number already exists.' })
             const passwordHash = await bcrypt.hash(password, 12)
             const newUser = { name, account, password: passwordHash }

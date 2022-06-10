@@ -10,5 +10,5 @@ export const generateAcceptToken = (payload: object) => {
 
 export const generateRefreshToken = (payload: object) => {
     return jwt.sign(payload, `${process.env.REFRESH_TOKEN_SEC}`, { expiresIn: '30d' })
-} 
+}
 
